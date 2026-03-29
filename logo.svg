@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" width="220" height="56" role="img" aria-label="Logo Pet Manezinho">
+  <title>Pet Manezinho</title>
+
+  <!-- Fundo arredondado -->
+  <rect width="220" height="56" rx="12" fill="#023E8A"/>
+
+  <!-- Onda decorativa (referência à Ilha de Florianópolis) -->
+  <path d="M0 42 Q30 34 55 42 Q80 50 110 42 Q140 34 165 42 Q190 50 220 42 L220 56 L0 56 Z" fill="#0077B6" opacity="0.5"/>
+
+  <!-- Patinha — almofada principal -->
+  <ellipse cx="42" cy="37" rx="13" ry="11" fill="#F4A261"/>
+
+  <!-- Patinha — dedos (4 bolinhas) -->
+  <ellipse cx="28" cy="24" rx="6"  ry="7"  fill="#F4A261" transform="rotate(-18 28 24)"/>
+  <ellipse cx="37" cy="18" rx="6"  ry="7"  fill="#F4A261" transform="rotate(-6 37 18)"/>
+  <ellipse cx="47" cy="18" rx="6"  ry="7"  fill="#F4A261" transform="rotate(6 47 18)"/>
+  <ellipse cx="56" cy="24" rx="6"  ry="7"  fill="#F4A261" transform="rotate(18 56 24)"/>
+
+  <!-- Texto principal -->
+  <text x="75" y="28"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="17"
+        font-weight="700"
+        fill="#FFFFFF"
+        letter-spacing="0.4">Pet Manezinho</text>
+
+  <!-- Subtítulo -->
+  <text x="76" y="44"
+        font-family="Segoe UI, Arial, sans-serif"
+        font-size="9.5"
+        fill="#CAF0F8"
+        letter-spacing="1.2">FLORIANÓPOLIS • SC</text>
+</svg>

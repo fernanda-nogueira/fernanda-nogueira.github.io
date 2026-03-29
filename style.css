@@ -1,0 +1,361 @@
+/* =====================================================
+   Pet Manezinho — Estilo Personalizado
+   Tema: Pet Shop em Florianópolis/SC
+   Paleta: azul oceano + areia quente + verde natureza
+   ===================================================== */
+
+:root {
+  --pm-primary:       #0077B6;   /* azul oceano */
+  --pm-primary-dark:  #023E8A;   /* azul profundo */
+  --pm-secondary:     #F4A261;   /* areia/coral — calor de Floripa */
+  --pm-accent:        #52B788;   /* verde natureza */
+  --pm-light:         #CAF0F8;   /* azul claro */
+  --pm-cream:         #FFF9F2;   /* fundo creme suave */
+  --pm-dark:          #0D2137;   /* rodapé escuro */
+  --pm-text:          #2C3E50;
+}
+
+/* ─── Base ─────────────────────────────────────────── */
+body {
+  background-color: var(--pm-cream);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--pm-text);
+}
+
+a {
+  color: var(--pm-primary);
+}
+
+a:hover {
+  color: var(--pm-primary-dark);
+}
+
+/* ─── Barra de informações (topo) ───────────────────── */
+.header-info {
+  background-color: var(--pm-primary);
+  color: #fff;
+  font-size: 0.82rem;
+  padding: 5px 0;
+}
+
+.header-info a {
+  color: var(--pm-light);
+  text-decoration: none;
+}
+
+.header-info a:hover {
+  color: #fff;
+}
+
+#live-clock {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Navbar ────────────────────────────────────────── */
+.navbar-petmanezinho {
+  background-color: var(--pm-primary-dark);
+}
+
+.navbar-petmanezinho .navbar-brand {
+  color: #fff !important;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.navbar-petmanezinho .nav-link {
+  color: rgba(255,255,255,0.85) !important;
+  font-weight: 500;
+  padding: 0.5rem 0.85rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.navbar-petmanezinho .nav-link:hover,
+.navbar-petmanezinho .nav-link.active {
+  color: #fff !important;
+  background-color: rgba(255,255,255,0.12);
+}
+
+.navbar-petmanezinho .navbar-toggler {
+  border-color: rgba(255,255,255,0.4);
+}
+
+.navbar-petmanezinho .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* ─── Carrossel ─────────────────────────────────────── */
+.carousel {
+  overflow: hidden;
+}
+
+.carousel-inner {
+  overflow: hidden;
+}
+
+.carousel-item {
+  overflow: hidden;
+}
+
+.carousel-slide {
+  height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.carousel-caption {
+  bottom: 2.5rem;
+}
+
+.carousel-caption-box {
+  background: rgba(2, 62, 138, 0.72);
+  border-radius: 10px;
+  padding: 14px 24px;
+  display: inline-block;
+  max-width: 520px;
+}
+
+.carousel-caption-box h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.carousel-caption-box p {
+  font-size: 0.95rem;
+  margin-bottom: 0.6rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--pm-secondary);
+}
+
+/* ─── Títulos de seção ──────────────────────────────── */
+.section-title {
+  color: var(--pm-primary-dark);
+  font-weight: 700;
+  border-left: 5px solid var(--pm-secondary);
+  padding-left: 12px;
+  margin-bottom: 1.5rem;
+}
+
+/* ─── Cards de produtos ─────────────────────────────── */
+.card-produto {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.09);
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+  background: #fff;
+  height: 100%;
+}
+
+.card-produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.14);
+}
+
+.card-produto .card-img-top {
+  border-radius: 14px 14px 0 0;
+  object-fit: contain;
+  object-position: center;
+  height: 190px;
+  width: 100%;
+  background-color: transparent;
+  padding: 10px;
+  mix-blend-mode: multiply;
+}
+
+.badge-preco {
+  background-color: var(--pm-secondary);
+  color: #1A3A5C;
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 5px 14px;
+  display: inline-block;
+}
+
+/* ─── Cards de funcionalidades (homepage) ───────────── */
+.feature-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 28px 20px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  height: 100%;
+  border-top: 4px solid var(--pm-primary);
+}
+
+.feature-icon {
+  font-size: 2.4rem;
+  color: var(--pm-primary);
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.feature-card h5 {
+  font-weight: 700;
+  color: var(--pm-primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+/* ─── Cards de serviços ─────────────────────────────── */
+.servico-card {
+  border: none;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.1);
+  height: 100%;
+}
+
+.servico-card .card-header {
+  background-color: var(--pm-primary);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 14px 20px;
+}
+
+.servico-card .card-header.telebusca {
+  background-color: var(--pm-accent);
+}
+
+.servico-card .card-body {
+  padding: 20px;
+}
+
+/* ─── Formulários ───────────────────────────────────── */
+.form-section-header {
+  background: linear-gradient(135deg, var(--pm-primary), var(--pm-primary-dark));
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 18px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-control:focus,
+.form-select:focus,
+.form-check-input:focus {
+  border-color: var(--pm-primary);
+  box-shadow: 0 0 0 0.2rem rgba(0, 119, 182, 0.22);
+}
+
+label.form-label {
+  font-weight: 600;
+  color: var(--pm-text);
+  font-size: 0.9rem;
+}
+
+.btn-agendar {
+  background: linear-gradient(135deg, var(--pm-primary), var(--pm-primary-dark));
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 30px;
+  padding: 12px 40px;
+  letter-spacing: 0.5px;
+  transition: opacity 0.2s, transform 0.2s;
+}
+
+.btn-agendar:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+/* ─── Tabelas ───────────────────────────────────────── */
+.table-pm thead {
+  background-color: var(--pm-primary);
+  color: #fff;
+}
+
+.table-pm tbody tr:hover {
+  background-color: #EAF4FB;
+}
+
+/* ─── Bloco de contato ──────────────────────────────── */
+.contact-icon {
+  color: var(--pm-primary);
+  font-size: 1.3rem;
+  width: 28px;
+  flex-shrink: 0;
+}
+
+.contact-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+}
+
+/* ─── Saudação dinâmica ─────────────────────────────── */
+#saudacao {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--pm-secondary);
+}
+
+/* ─── Hero banner (index) ───────────────────────────── */
+.hero-banner {
+  background: linear-gradient(135deg, var(--pm-primary-dark) 0%, var(--pm-primary) 60%, var(--pm-accent) 100%);
+  color: #fff;
+  padding: 48px 0 40px;
+  margin-bottom: 2rem;
+}
+
+/* ─── Rodapé ────────────────────────────────────────── */
+footer.site-footer {
+  background-color: var(--pm-dark);
+  color: #b0c4d8;
+  font-size: 0.9rem;
+}
+
+footer.site-footer h5 {
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+footer.site-footer a {
+  color: var(--pm-secondary);
+  text-decoration: none;
+}
+
+footer.site-footer a:hover {
+  color: #fff;
+}
+
+footer.site-footer .border-top {
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+footer.site-footer .footer-logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* ─── Responsividade ────────────────────────────────── */
+@media (max-width: 768px) {
+  .carousel-slide {
+    height: 200px;
+  }
+
+  .carousel-caption-box h2 {
+    font-size: 1.1rem;
+  }
+
+  .header-info .d-flex {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

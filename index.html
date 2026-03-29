@@ -2,89 +2,295 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pet Manezinho — Início</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>🐾 Pet Manezinho</h1>
-  <p>Rua dos Pinheiros, 452 — Trindade, Florianópolis/SC | Tel: (48) 9999-1234 | contato@petmanezinho.com.br</p>
-  <p>Horário de funcionamento: Segunda a Sexta das 8h às 19h | Sábado das 8h às 17h</p>
+<!-- Acessibilidade: pular para o conteúdo principal -->
+<a href="#main-content" class="visually-hidden-focusable btn btn-sm btn-warning position-absolute top-0 start-0 m-1 z-3">
+  Pular para o conteúdo principal
+</a>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="acessorios.html">Acessórios</a></li>
-      <li><a href="racoes.html">Rações</a></li>
-      <li><a href="higiene.html">Higiene e Limpeza</a></li>
-      <li><a href="servicos.html">Serviços</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
-  <hr/>
-</header>
+<!-- Barra de informações -->
+<div class="header-info" role="banner">
+  <div class="container d-flex justify-content-between align-items-center flex-wrap gap-1">
+    <span>
+      <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+      Rua dos Pinheiros, 452 — Trindade, Florianópolis/SC &nbsp;|&nbsp;
+      <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+      (48) 9999-1234 &nbsp;|&nbsp;
+      <i class="bi bi-envelope-fill" aria-hidden="true"></i>
+      contato@petmanezinho.com.br
+    </span>
+    <span id="live-clock" aria-live="polite" aria-label="Horário atual"></span>
+  </div>
+</div>
 
-<main>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-petmanezinho shadow" aria-label="Navegação principal">
+  <div class="container">
+    <a class="navbar-brand" href="index.html" aria-label="Pet Manezinho — página inicial">
+      <img src="logo.svg" alt="Logo Pet Manezinho — pet shop em Florianópolis" height="38" style="height:38px;width:auto;">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarMain" aria-controls="navbarMain"
+            aria-expanded="false" aria-label="Abrir menu de navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarMain">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0" role="menubar">
+        <li class="nav-item" role="none"><a class="nav-link active" aria-current="page" href="index.html" role="menuitem">Início</a></li>
+        <li class="nav-item" role="none"><a class="nav-link" href="acessorios.html" role="menuitem">Acessórios</a></li>
+        <li class="nav-item" role="none"><a class="nav-link" href="racoes.html" role="menuitem">Rações</a></li>
+        <li class="nav-item" role="none"><a class="nav-link" href="higiene.html" role="menuitem">Higiene e Limpeza</a></li>
+        <li class="nav-item" role="none"><a class="nav-link" href="servicos.html" role="menuitem">Serviços</a></li>
+        <li class="nav-item" role="none">
+          <a class="nav-link fw-bold" href="cadastro.html" role="menuitem"
+             style="color: #F4A261 !important;">
+            <i class="bi bi-calendar2-check" aria-hidden="true"></i> Agendar
+          </a>
+        </li>
+        <li class="nav-item" role="none"><a class="nav-link" href="contato.html" role="menuitem">Contato</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
-  <h2>Bem-vindo ao Pet Manezinho!</h2>
-  <p>
-    Somos um petshop localizado em Florianópolis/SC, dedicado a oferecer os melhores produtos
-    e serviços para o seu animal de estimação. Aqui você encontra tudo que o seu pet precisa,
-    com qualidade, carinho e preço justo.
-  </p>
+<main id="main-content">
 
-  <h3>O que você encontra aqui</h3>
-  <ul>
-    <li><a href="acessorios.html">Acessórios</a> — roupas, brinquedos, camas e muito mais</li>
-    <li><a href="racoes.html">Rações Não Perecíveis</a> — alimentação balanceada para cães e gatos</li>
-    <li><a href="higiene.html">Higiene e Limpeza</a> — tapetes higiênicos, fraldas, shampoos e afins</li>
-    <li><a href="servicos.html">Serviços</a> — banho e tosa, com ou sem tele-busca</li>
-  </ul>
+  <!-- Carrossel -->
+  <section aria-label="Destaques do Pet Manezinho">
+    <div id="carrosselPetManezinho" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
 
-  <h3>Por que escolher o Pet Manezinho?</h3>
-  <ul>
-    <li>Mais de 15 anos cuidando dos pets de Florianópolis</li>
-    <li>Profissionais qualificados e apaixonados por animais</li>
-    <li>Produtos selecionados com critério de qualidade</li>
-    <li>Atendimento humanizado para tutores e pets</li>
-    <li>Serviço de tele-busca para sua comodidade</li>
-  </ul>
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrosselPetManezinho" data-bs-slide-to="0"
+                class="active" aria-current="true" aria-label="Slide 1 — Acessórios"></button>
+        <button type="button" data-bs-target="#carrosselPetManezinho" data-bs-slide-to="1"
+                aria-label="Slide 2 — Rações Premium"></button>
+        <button type="button" data-bs-target="#carrosselPetManezinho" data-bs-slide-to="2"
+                aria-label="Slide 3 — Banho e Tosa"></button>
+      </div>
 
-  <h3>Fale Conosco</h3>
-  <p>
-    Dúvidas, agendamentos ou informações? Entre em <a href="contato.html">contato</a> conosco.
-    Será um prazer atender você e o seu pet!
-  </p>
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="carousel-slide"
+               style="background-image: url('guia-cachorro.jpg')"
+               role="img"
+               aria-label="Guia para cachorro — acessórios no Pet Manezinho"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <div class="carousel-caption-box">
+              <h2>Acessórios com Estilo</h2>
+              <p>Roupas, brinquedos e camas para o seu pet ser o mais fashion da Ilha!</p>
+              <a href="acessorios.html" class="btn btn-warning btn-sm fw-bold">Ver Acessórios</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-slide"
+               style="background-image: url('racao-pedigree.jpg')"
+               role="img"
+               aria-label="Ração Pedigree para cães — rações premium no Pet Manezinho"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <div class="carousel-caption-box">
+              <h2>Rações de Qualidade</h2>
+              <p>Alimentação balanceada para cães e gatos de todos os portes e idades.</p>
+              <a href="racoes.html" class="btn btn-warning btn-sm fw-bold">Ver Rações</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="carousel-slide"
+               style="background-image: url('banho-dog.jpeg')"
+               role="img"
+               aria-label="Banho em cão — serviços de banho e tosa no Pet Manezinho"></div>
+          <div class="carousel-caption d-none d-sm-block">
+            <div class="carousel-caption-box">
+              <h2>Banho, Tosa e Muito Mais</h2>
+              <p>Serviço completo com tele-busca para a comodidade da sua família.</p>
+              <a href="cadastro.html" class="btn btn-warning btn-sm fw-bold">Agendar Agora</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button"
+              data-bs-target="#carrosselPetManezinho" data-bs-slide="prev"
+              aria-label="Slide anterior">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      </button>
+      <button class="carousel-control-next" type="button"
+              data-bs-target="#carrosselPetManezinho" data-bs-slide="next"
+              aria-label="Próximo slide">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Boas-vindas -->
+  <section class="container mt-5 mb-5" aria-labelledby="titulo-boas-vindas">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-7">
+        <h2 id="titulo-boas-vindas" class="section-title">Bem-vindo ao Pet Manezinho!</h2>
+        <p class="lead">
+          Somos um petshop com <strong>raízes em Florianópolis</strong>, dedicados a oferecer os melhores
+          produtos e serviços para o seu animal de estimação. Aqui você encontra tudo que o seu pet precisa,
+          com qualidade, carinho e o jeito manezinho de ser!
+        </p>
+        <p>
+          Do banho e tosa com tele-busca às rações premium, do tapete higiênico à roupa de grife — o Pet
+          Manezinho cuida do seu melhor amigo com toda a atenção que ele merece.
+        </p>
+        <a href="cadastro.html" class="btn btn-agendar mt-2">
+          <i class="bi bi-calendar2-check" aria-hidden="true"></i> Agendar Banho e Tosa
+        </a>
+      </div>
+      <div class="col-lg-5">
+        <img src="cama-pet.jpg"
+             class="img-fluid rounded-4 shadow"
+             alt="Cama confortável para pets — Pet Manezinho Florianópolis"
+             style="width:100%; object-fit:cover; max-height:280px;" />
+      </div>
+    </div>
+  </section>
+
+  <!-- O que você encontra aqui -->
+  <section class="container mb-5" aria-labelledby="titulo-categorias">
+    <h2 id="titulo-categorias" class="section-title">O que você encontra aqui</h2>
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-lg-3">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true"><i class="bi bi-bag-heart-fill"></i></span>
+          <h5>Acessórios</h5>
+          <p class="text-muted small">Roupas, brinquedos, camas e muito mais para o seu pet.</p>
+          <a href="acessorios.html" class="btn btn-sm btn-outline-primary mt-2">Ver produtos</a>
+        </article>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true"><i class="bi bi-cup-hot-fill"></i></span>
+          <h5>Rações</h5>
+          <p class="text-muted small">Alimentação balanceada de marcas reconhecidas.</p>
+          <a href="racoes.html" class="btn btn-sm btn-outline-primary mt-2">Ver produtos</a>
+        </article>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true"><i class="bi bi-droplet-fill"></i></span>
+          <h5>Higiene</h5>
+          <p class="text-muted small">Shampoos, fraldas, tapetes higiênicos e afins.</p>
+          <a href="higiene.html" class="btn btn-sm btn-outline-primary mt-2">Ver produtos</a>
+        </article>
+      </div>
+
+      <div class="col-sm-6 col-lg-3">
+        <article class="feature-card">
+          <span class="feature-icon" aria-hidden="true"><i class="bi bi-scissors"></i></span>
+          <h5>Serviços</h5>
+          <p class="text-muted small">Banho e tosa com ou sem tele-busca. Agende já!</p>
+          <a href="servicos.html" class="btn btn-sm btn-outline-primary mt-2">Ver serviços</a>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Por que escolher -->
+  <section class="py-5 mb-2" style="background-color:#EAF4FB;" aria-labelledby="titulo-por-que">
+    <div class="container">
+      <h2 id="titulo-por-que" class="section-title">Por que escolher o Pet Manezinho?</h2>
+      <div class="row g-3">
+        <div class="col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-award-fill feature-icon mt-1" aria-hidden="true" style="font-size:1.8rem;"></i>
+            <div>
+              <h6 class="fw-bold mb-1">+15 anos de experiência</h6>
+              <p class="text-muted small mb-0">Cuidando dos pets de Florianópolis com dedicação e profissionalismo.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-heart-fill feature-icon mt-1" aria-hidden="true" style="font-size:1.8rem;color:#e74c3c;"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Equipe apaixonada</h6>
+              <p class="text-muted small mb-0">Profissionais qualificados e apaixonados por animais.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="d-flex align-items-start gap-3">
+            <i class="bi bi-truck feature-icon mt-1" aria-hidden="true" style="font-size:1.8rem;"></i>
+            <div>
+              <h6 class="fw-bold mb-1">Tele-busca</h6>
+              <p class="text-muted small mb-0">Buscamos e entregamos o seu pet com van climatizada.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<hr/>
-<footer>
-  <h3>Pet Manezinho</h3>
-  <p><strong>Endereço:</strong> Rua dos Pinheiros, 452 — Trindade, Florianópolis/SC — CEP 88036-001</p>
-  <p><strong>Telefone:</strong> (48) 9999-1234</p>
-  <p><strong>E-mail:</strong> contato@petmanezinho.com.br</p>
-  <p><strong>Horário:</strong> Segunda a Sexta das 8h às 19h | Sábado das 8h às 17h</p>
-  <br/>
-  <nav>
-    <strong>Navegação:</strong>
-    <a href="index.html">Início</a> |
-    <a href="acessorios.html">Acessórios</a> |
-    <a href="racoes.html">Rações</a> |
-    <a href="higiene.html">Higiene e Limpeza</a> |
-    <a href="servicos.html">Serviços</a> |
-    <a href="contato.html">Contato</a>
-  </nav>
-  <br/>
-  <p>
-    <strong>Informações Legais:</strong>
-    CNPJ: 80.008.091/0001-40
-  </p>
-  <p>
-    &copy; 2025 Pet Manezinho. Todos os direitos reservados.<br/>
-    Desenvolvido por Fernanda Nogueira Macena Lima — Fundamentos de Sistemas Web — PUCRS Online — 2026
-  </p>
+<!-- Rodapé -->
+<footer class="site-footer pt-5 pb-3 mt-4" role="contentinfo">
+  <div class="container">
+    <div class="row g-4 mb-4">
+
+      <div class="col-md-4">
+        <p class="footer-logo mb-2"><img src="logo.svg" alt="Logo Pet Manezinho — pet shop em Florianópolis" height="38" style="height:38px;width:auto;"></p>
+        <p class="small">O petshop com o jeitinho manezinho de cuidar do seu melhor amigo, no coração de Florianópolis.</p>
+        <p class="small">CNPJ: 80.008.091/0001-40</p>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Informações</h5>
+        <ul class="list-unstyled small">
+          <li><i class="bi bi-geo-alt-fill me-1" aria-hidden="true"></i> Rua dos Pinheiros, 452 — Trindade, Florianópolis/SC</li>
+          <li><i class="bi bi-telephone-fill me-1" aria-hidden="true"></i> (48) 9999-1234</li>
+          <li><i class="bi bi-whatsapp me-1" aria-hidden="true"></i> (48) 99999-5678</li>
+          <li><i class="bi bi-envelope-fill me-1" aria-hidden="true"></i>
+            <a href="mailto:contato@petmanezinho.com.br">contato@petmanezinho.com.br</a>
+          </li>
+          <li class="mt-2"><i class="bi bi-clock-fill me-1" aria-hidden="true"></i> Seg–Sex: 8h–19h | Sáb: 8h–17h</li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <h5>Navegação</h5>
+        <nav aria-label="Links do rodapé">
+          <ul class="list-unstyled small">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="acessorios.html">Acessórios</a></li>
+            <li><a href="racoes.html">Rações</a></li>
+            <li><a href="higiene.html">Higiene e Limpeza</a></li>
+            <li><a href="servicos.html">Serviços</a></li>
+            <li><a href="cadastro.html">Cadastro / Agendamento</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+    <div class="border-top pt-3 text-center small">
+      <p class="mb-1">&copy; 2025 Pet Manezinho. Todos os direitos reservados.</p>
+      <p class="mb-0">Desenvolvido por Fernanda Nogueira Macena Lima — Fundamentos de Sistemas Web — PUCRS Online — 2026</p>
+    </div>
+  </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
