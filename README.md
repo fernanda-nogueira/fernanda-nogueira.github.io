@@ -32,6 +32,7 @@ O **Pet Manezinho** é um petshop com mais de 15 anos de atuação em Florianóp
 - **Relógio ao vivo** — exibido na barra superior, atualizado a cada segundo
 - **Validação de formulário** — feedback visual em tempo real nos campos obrigatórios do cadastro
 - **Alerta de confirmação** — mensagem de sucesso exibida após o envio do agendamento
+- **Data mínima de agendamento** — bloqueia datas passadas no campo de data do formulário
 
 ## Formulário de Cadastro e Agendamento (`cadastro.html`)
 

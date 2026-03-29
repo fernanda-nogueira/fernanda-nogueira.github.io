@@ -1,9 +1,4 @@
-/* =====================================================
-   Pet Manezinho — JavaScript
-   Funções: relógio ao vivo, saudação temporal
-   ===================================================== */
-
-// ── Relógio ao vivo ────────────────────────────────────
+// Relógio ao vivo
 function atualizarRelogio() {
   const el = document.getElementById('live-clock');
   if (!el) return;
@@ -14,7 +9,7 @@ function atualizarRelogio() {
   el.textContent = agora.toLocaleString('pt-BR', opcoes);
 }
 
-// ── Validação do formulário de cadastro ───────────────
+//  Validação do formulário de cadastro 
 function validarFormulario() {
   const form = document.getElementById('form-cadastro');
   if (!form) return;
@@ -28,7 +23,6 @@ function validarFormulario() {
       return;
     }
 
-    // Exibe mensagem de sucesso
     const alerta = document.getElementById('alerta-sucesso');
     if (alerta) {
       alerta.classList.remove('d-none');
@@ -39,10 +33,18 @@ function validarFormulario() {
   });
 }
 
-// ── Inicialização ──────────────────────────────────────
+// Data mínima do agendamento 
+function definirDataMinima() {
+  const campo = document.getElementById('data-agendamento');
+  if (!campo) return;
+  campo.setAttribute('min', new Date().toISOString().split('T')[0]);
+}
+
+// Inicialização
 document.addEventListener('DOMContentLoaded', function () {
   atualizarRelogio();
   setInterval(atualizarRelogio, 1000);
 
   validarFormulario();
+  definirDataMinima();
 });

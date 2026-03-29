@@ -1,8 +1,3 @@
-/* =====================================================
-   Pet Manezinho — Estilo Personalizado
-   Tema: Pet Shop em Florianópolis/SC
-   Paleta: azul oceano + areia quente + verde natureza
-   ===================================================== */
 
 :root {
   --pm-primary:       #0077B6;   /* azul oceano */
@@ -15,7 +10,7 @@
   --pm-text:          #2C3E50;
 }
 
-/* ─── Base ─────────────────────────────────────────── */
+/* Base */
 body {
   background-color: var(--pm-cream);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +25,7 @@ a:hover {
   color: var(--pm-primary-dark);
 }
 
-/* ─── Barra de informações (topo) ───────────────────── */
+/*  Barra de informações (topo) */
 .header-info {
   background-color: var(--pm-primary);
   color: #fff;
@@ -52,7 +47,7 @@ a:hover {
   letter-spacing: 0.5px;
 }
 
-/* ─── Navbar ────────────────────────────────────────── */
+/*  Navbar */
 .navbar-petmanezinho {
   background-color: var(--pm-primary-dark);
 }
@@ -86,7 +81,7 @@ a:hover {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.85)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-/* ─── Carrossel ─────────────────────────────────────── */
+/* Carrossel */
 .carousel {
   overflow: hidden;
 }
@@ -133,7 +128,7 @@ a:hover {
   background-color: var(--pm-secondary);
 }
 
-/* ─── Títulos de seção ──────────────────────────────── */
+/* Títulos de seção */
 .section-title {
   color: var(--pm-primary-dark);
   font-weight: 700;
@@ -142,7 +137,7 @@ a:hover {
   margin-bottom: 1.5rem;
 }
 
-/* ─── Cards de produtos ─────────────────────────────── */
+/* Cards de produtos */
 .card-produto {
   border: none;
   border-radius: 14px;
@@ -178,7 +173,7 @@ a:hover {
   display: inline-block;
 }
 
-/* ─── Cards de funcionalidades (homepage) ───────────── */
+/* Cards de funcionalidades (homepage) */
 .feature-card {
   background: #fff;
   border-radius: 14px;
@@ -202,7 +197,7 @@ a:hover {
   margin-bottom: 0.5rem;
 }
 
-/* ─── Cards de serviços ─────────────────────────────── */
+/* Cards de serviços */
 .servico-card {
   border: none;
   border-radius: 14px;
@@ -227,7 +222,7 @@ a:hover {
   padding: 20px;
 }
 
-/* ─── Formulários ───────────────────────────────────── */
+/* Formulários */
 .form-section-header {
   background: linear-gradient(135deg, var(--pm-primary), var(--pm-primary-dark));
   color: #fff;
@@ -272,17 +267,18 @@ label.form-label {
   color: #fff;
 }
 
-/* ─── Tabelas ───────────────────────────────────────── */
+/*  Tabelas */
 .table-pm thead {
   background-color: var(--pm-primary);
   color: #fff;
 }
 
-.table-pm tbody tr:hover {
+.table-pm tbody tr:hover td,
+.table-pm tbody tr:hover th {
   background-color: #EAF4FB;
 }
 
-/* ─── Bloco de contato ──────────────────────────────── */
+/* Bloco de contato */
 .contact-icon {
   color: var(--pm-primary);
   font-size: 1.3rem;
@@ -297,14 +293,14 @@ label.form-label {
   box-shadow: 0 2px 14px rgba(0,0,0,0.08);
 }
 
-/* ─── Saudação dinâmica ─────────────────────────────── */
+/* Saudação dinâmica */
 #saudacao {
   font-size: 1.1rem;
   font-weight: 600;
   color: var(--pm-secondary);
 }
 
-/* ─── Hero banner (index) ───────────────────────────── */
+/* Hero banner (index */
 .hero-banner {
   background: linear-gradient(135deg, var(--pm-primary-dark) 0%, var(--pm-primary) 60%, var(--pm-accent) 100%);
   color: #fff;
@@ -312,7 +308,7 @@ label.form-label {
   margin-bottom: 2rem;
 }
 
-/* ─── Rodapé ────────────────────────────────────────── */
+/*  Rodapé */
 footer.site-footer {
   background-color: var(--pm-dark);
   color: #b0c4d8;
@@ -344,7 +340,7 @@ footer.site-footer .footer-logo {
   color: #fff;
 }
 
-/* ─── Responsividade ────────────────────────────────── */
+/* Responsividade  */
 @media (max-width: 768px) {
   .carousel-slide {
     height: 200px;
